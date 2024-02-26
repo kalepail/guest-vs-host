@@ -12,7 +12,7 @@ fn test_v1() {
     let contract_id = env.register_contract(None, Contract);
     let client = ContractClient::new(&env, &contract_id);
 
-    env.budget().reset_unlimited();
+    env.budget().reset_limits(100000000, 41943040);
 
     let hash = client.v1();
 
@@ -29,7 +29,7 @@ fn test_v2() {
     let contract_id = env.register_contract(None, Contract);
     let client = ContractClient::new(&env, &contract_id);
 
-    env.budget().reset_unlimited();
+    env.budget().reset_limits(100000000, 41943040);
 
     let hash = client.v2();
 
@@ -46,7 +46,7 @@ fn test_v3() {
     let contract_id = env.register_contract(None, Contract);
     let client = ContractClient::new(&env, &contract_id);
 
-    env.budget().reset_unlimited();
+    env.budget().reset_limits(100000000, 41943040);
 
     let hash = client.v3();
 
