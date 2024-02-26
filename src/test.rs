@@ -3,8 +3,8 @@
 use std::println;
 extern crate std;
 
-use soroban_sdk::Env;
 use crate::{Contract, ContractClient};
+use soroban_sdk::Env;
 
 #[test]
 fn test_v1() {

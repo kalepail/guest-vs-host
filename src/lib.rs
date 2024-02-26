@@ -17,7 +17,7 @@ impl Contract {
         env.crypto().sha256(&bytes)
     }
 
-    pub fn v2 (env: Env) -> BytesN<32> {
+    pub fn v2(env: Env) -> BytesN<32> {
         let mut bytes = Bytes::new(&env);
 
         for i in 0..5000 {
@@ -27,7 +27,7 @@ impl Contract {
         env.crypto().sha256(&bytes)
     }
 
-    pub fn v3 (env: Env) -> BytesN<32> {
+    pub fn v3(env: Env) -> BytesN<32> {
         let mut bytes = [u8::MAX; 5000];
 
         for (i, byte) in bytes.iter_mut().enumerate() {
